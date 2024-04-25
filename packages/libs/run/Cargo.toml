@@ -1,0 +1,11 @@
+[package]
+name = "run"
+version = "0.1.0"
+edition = "2021"
+
+[dependencies]
+cacher = { workspace = true }
+hasher = { workspace = true }
+init = { workspace = true }
+clap = { version = "4.5.4", features = ["derive"] }
+rayon = "1.10.0"

@@ -1,0 +1,8 @@
+[package]
+name = "cacher"
+version = "0.1.0"
+edition = "2021"
+
+[dependencies]
+init = { workspace = true }
+zipper = { workspace = true }

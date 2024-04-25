@@ -1,0 +1,8 @@
+[package]
+name = "zipper"
+version = "0.1.0"
+edition = "2021"
+
+[dependencies]
+zip = "1.1.1"
+walkdir = "2.5.0"

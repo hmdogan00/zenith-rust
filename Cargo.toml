@@ -1,0 +1,13 @@
+[workspace]
+members = [ 
+    "packages/services/cli"
+]
+resolver = "2"
+
+[workspace.dependencies]
+affected = { path = "packages/libs/affected" }
+cacher = { path = "packages/libs/cacher" }
+hasher = { path = "packages/libs/hasher" }
+init = { path = "packages/libs/init" }
+run = { path = "packages/libs/run" }
+zipper = { path = "packages/libs/zipper" }
