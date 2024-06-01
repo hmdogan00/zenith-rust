@@ -54,7 +54,7 @@ fn main() {
             affected::list_affected(args);
         }
         Commands::Run(args) => {
-            run::run(&args, workspace);
+            run::run(&args, workspace, cli.monorepo);
         }
     }
 }

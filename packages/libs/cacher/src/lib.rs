@@ -1,4 +1,4 @@
-// implement a cacher that can get and put results from a CLI command
+// a cacher that can get and put results from a CLI command
 // the cacher can be a remote service or a local cache
 // to get the cache, the cacher needs to know the project, the command and the hash
 // to put the cache, the cacher needs to know the project, the command, the hash and the result
@@ -24,7 +24,7 @@ impl Cache {
             cache_type: c_type,
         }
     }
-    pub fn get(&self, project: &init::Project, command: &str, hash: &str) -> Option<String> {
+    pub fn get(&self, project: &init::Project, command: &str, hash: &str, root: String) -> Option<String> {
         let command = command.replace(" ", "-");
         match self.cache_type {
             CacheType::Remote => {
@@ -32,7 +32,8 @@ impl Cache {
                 None
             }
             CacheType::Local => {
-                println!("Fetching local cache: {}/{}/{}", project.name, command, hash);
+                // cache path is root of the project + .renith_cache
+                println!("Fetching local cache from {}/.renith_cache", root );
                 None
             }
         }
